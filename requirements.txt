@@ -262,4 +262,3 @@ xlwings==0.28.7
 y-py==0.5.9
 yarl==1.9.2
 ypy-websocket==0.8.2
-zipp==3.11.0
