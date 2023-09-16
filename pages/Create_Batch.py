@@ -21,9 +21,9 @@ filepath = os.path.abspath(__file__)
 
 # Strings on external public sites
 if "Local" not in filepath:
-    inputFolder = fr".\input\boot_bat"
+    inputFolder = fr"..\input\boot_bat"
     inputFile = fr"{inputFolder}\master_boot.bat"
-    outputFolder =  fr".\output\boot_bat"
+    outputFolder =  fr"..\output\boot_bat"
     webTitle = ":rocket: Delayed app launch batch creation"
     webTab = "Create batch"
 
