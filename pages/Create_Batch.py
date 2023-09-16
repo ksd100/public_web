@@ -3,14 +3,10 @@ from datetime import datetime
 import streamlit as st
 import shutil
 from pathlib import Path
-import pythoncom
-import win32com.client
 import os
 from PIL import Image
 import pandas as pd
-import math
-import configparser
-import json
+
 from streamlit_extras.colored_header import colored_header
 
 # ---------------------------------------------------------------------------------------
@@ -24,14 +20,14 @@ from streamlit_extras.colored_header import colored_header
 filepath = os.path.abspath(__file__)
 
 # Strings on external public sites
-if "RPA_app" in filepath:
-    inputFolder = fr"\\10.XX.XX.1\XXXX\input\boot_bat"
+if "streamlit" in filepath:
+    inputFolder = fr".\input\boot_bat"
     inputFile = fr"{inputFolder}\master_boot.bat"
-    outputFolder =  fr"\\10.XX.XX.1\XXXX\output\boot_bat"
+    outputFolder =  fr".\output\boot_bat"
     webTitle = ":rocket: Delayed app launch batch creation"
     webTab = "Create batch file"
 
-    iconPath = "./img/favicon/time.png"
+    iconPath = "./img/favicon/speed.png"
 
 # String in local environment
 else:
