@@ -21,9 +21,9 @@ filepath = os.path.abspath(__file__)
 
 # Strings on external public sites
 if "Local" not in filepath:
-    inputFolder = fr"..\input\boot_bat"
+    inputFolder = fr"../input/boot_bat"
     inputFile = fr"{inputFolder}\master_boot.bat"
-    outputFolder =  fr"..\output\boot_bat"
+    outputFolder =  fr"../output/boot_bat"
     webTitle = ":rocket: Delayed app launch batch creation"
     webTab = "Create batch"
 
@@ -223,14 +223,14 @@ def web_Home(webTitle, webTab):
                 if value : 
 
                     # file saving
-                    outputDamFile = fr"{outputOfficeFolder}\app_start_{updated_data['file-name'][i]}.bat"
-                    shutil.copy2(inputFile, outputDamFile)
+                    outputOfficeFile = fr"{outputOfficeFolder}\app_start_{updated_data['file-name'][i]}.bat"
+                    shutil.copy2(inputFile, outputOfficeFile)
 
-                    rep_TextFile(outputDamFile, "val_Time", updated_data['Launch delay (sec)'][i])
-                    rep_TextFile(outputDamFile, "val_ExePath", folderPath)
-                    rep_TextFile(outputDamFile, "val_App", exeName)
+                    rep_TextFile(outputOfficeFile, "val_Time", updated_data['Launch delay (sec)'][i])
+                    rep_TextFile(outputOfficeFile, "val_ExePath", folderPath)
+                    rep_TextFile(outputOfficeFile, "val_App", exeName)
 
-                    rep_TextFile(outputDamFile, "val_Node", updated_data['Node No.'][i])
+                    rep_TextFile(outputOfficeFile, "val_Node", updated_data['Node No.'][i])
 
 
                 else:
