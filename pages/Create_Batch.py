@@ -27,7 +27,7 @@ if "Local" not in filepath:
     webTitle = ":rocket: Delayed app launch batch creation"
     webTab = "Create batch"
 
-    iconPath = "./img/favicon/speed.png"
+    iconPath = "./img/favicon/cloud.ico"
 
 # String in local environment
 else:

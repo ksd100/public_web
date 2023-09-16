@@ -21,7 +21,7 @@ if "Local" not in filepath:
     webTitle=":house: Trial Site"
     webTab="Trial Site"
 
-    favicon = "./img/favicon/speed.png"
+    favicon = "./img/favicon/cloud.ico"
 
 else:
     webTitle=":evergreen_tree: Trial Site -Local"
