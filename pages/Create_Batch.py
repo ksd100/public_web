@@ -22,7 +22,7 @@ filepath = os.path.abspath(__file__)
 # Strings on external public sites
 if "Local" not in filepath:
     inputFolder = fr"../input/boot_bat"
-    inputFile = fr"{inputFolder}\master_boot.bat"
+    inputFile = fr"{inputFolder}/master_boot.bat"
     outputFolder =  fr"../output/boot_bat"
     webTitle = ":rocket: Delayed app launch batch creation"
     webTab = "Create batch"
@@ -203,7 +203,7 @@ def web_Home(webTitle, webTab):
 
     if event_ok:
 
-        outputOfficeFolder = fr"{outputFolder}\Boot_bat_{office}"
+        outputOfficeFolder = fr"{outputFolder}/Boot_bat_{office}"
 
         # Unchecked decision
         if any(updated_data['creating']):
@@ -223,7 +223,7 @@ def web_Home(webTitle, webTab):
                 if value : 
 
                     # file saving
-                    outputOfficeFile = fr"{outputOfficeFolder}\app_start_{updated_data['file-name'][i]}.bat"
+                    outputOfficeFile = fr"{outputOfficeFolder}/app_start_{updated_data['file-name'][i]}.bat"
                     shutil.copy2(inputFile, outputOfficeFile)
 
                     rep_TextFile(outputOfficeFile, "val_Time", updated_data['Launch delay (sec)'][i])
