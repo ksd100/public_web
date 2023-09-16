@@ -192,7 +192,7 @@ def web_Home(webTitle, webTab):
 
     colored_header(
         label="",
-        description="　",
+        description=" ",
         color_name="blue-70",
         )
     col1, col2 = st.columns(2)
@@ -240,16 +240,10 @@ def web_Home(webTitle, webTab):
                 else:
                     pass
 
-
-
             st.code(outputOfficeFolder, language="html")
             st.success(compMsg)
     
             st.error(f"If you wish to recreate it, delete the **(boot_bat_{office})**  folder.")
-
-
-
-
 
         pass
 
