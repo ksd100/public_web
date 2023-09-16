@@ -8,27 +8,30 @@ import time, datetime
 
 import subprocess
 import sys
-# import pyautogui as pa
 
 import streamlit.components.v1 as stc
 import os
 
 
 
-# 外部とでタイトルとアイコン変える
+# Change titles and icons for external and
 filepath = os.path.abspath(__file__)
 
-if "homepc" in filepath:
-    webTitle="ST-CLOUD　家PC"
-    favicon = "./img/icon/cloud.ico"
+if "streamlit" in filepath:
+    webTitle=":house: Trial Site"
+    webTab="Trial Site"
+
+    favicon = "./img/favicon/speed.png"
 
 else:
-    webTitle=":house: Trial Site"
-    favicon = "./img/icon/speed.png"
+    webTitle=":evergreen_tree: Trial Site -Local"
+    webTab="Trial Site -L"
+
+    favicon = "./img/favicon/python.ico"
 
 
 def web_Home():
-    st.set_page_config(page_title=webTitle, page_icon=favicon)
+    st.set_page_config(page_title=webTab, page_icon=favicon)
     st.title(webTitle)
     st.write('')
     st.write('')

@@ -25,7 +25,7 @@ if "streamlit" in filepath:
     inputFile = fr"{inputFolder}\master_boot.bat"
     outputFolder =  fr".\output\boot_bat"
     webTitle = ":rocket: Delayed app launch batch creation"
-    webTab = "Create batch file"
+    webTab = "Create batch"
 
     iconPath = "./img/favicon/speed.png"
 
@@ -34,8 +34,8 @@ else:
     inputFolder =fr"C:\Users\j111718\AppData\Local\Programs\Python\workspace\homePC_code\input\boot_bat"
     inputFile = fr"{inputFolder}\master_boot.bat"
     outputFolder =  fr"C:\Users\j111718\AppData\Local\Programs\Python\workspace\homePC_code\output\boot_bat"
-    webTitle = ":rocket: Delayed app launch batch creation -Local"
-    webTab = "Create batch file"
+    webTitle = ":hotdog: Delayed app launch batch creation -L"
+    webTab = "Create batch -L"
 
     iconPath = "./img/favicon/python.ico"
 
