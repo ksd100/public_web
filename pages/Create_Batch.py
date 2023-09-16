@@ -123,6 +123,7 @@ def web_Home(webTitle, webTab):
     st.write("")
 
     st.write("**Set according to your system.**")
+    st.write(":red[It does not work on streamlit cloud because it is not possible to generate folders. Please use it after dropping it locally.]")
     st.write("")
 
     st.write("")
