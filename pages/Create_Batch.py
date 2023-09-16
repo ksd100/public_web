@@ -20,7 +20,7 @@ from streamlit_extras.colored_header import colored_header
 filepath = os.path.abspath(__file__)
 
 # Strings on external public sites
-if "streamlit" in filepath:
+if "Local" not in filepath:
     inputFolder = fr".\input\boot_bat"
     inputFile = fr"{inputFolder}\master_boot.bat"
     outputFolder =  fr".\output\boot_bat"

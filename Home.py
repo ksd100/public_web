@@ -17,7 +17,7 @@ import os
 # Change titles and icons for external and
 filepath = os.path.abspath(__file__)
 
-if "streamlit" in filepath:
+if "Local" not in filepath:
     webTitle=":house: Trial Site"
     webTab="Trial Site"
 
