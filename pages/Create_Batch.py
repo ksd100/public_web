@@ -25,9 +25,9 @@ filepath = os.path.abspath(__file__)
 
 # Strings on external public sites
 if "RPA_app" in filepath:
-    inputFolder = r"\\10.77.55.20\Users\mizurpa\workspace\RPA_app\input\起動バッチ"
+    inputFolder = fr"\\10.XX.XX.1\XXXX\input\boot_bat"
     inputFile = fr"{inputFolder}\master_boot.bat"
-    outputFolder =  r"\\10.77.55.1\課内共用（ワーク）\RPA用\起動バッチ"
+    outputFolder =  fr"\\10.XX.XX.1\XXXX\output\boot_bat"
     webTitle = ":rocket: Delayed app launch batch creation"
     webTab = "Create batch file"
 
@@ -35,9 +35,9 @@ if "RPA_app" in filepath:
 
 # String in local environment
 else:
-    inputFolder = r"C:\Users\j111718\AppData\Local\Programs\Python\workspace\homePC_code\input\boot_bat"
+    inputFolder =fr"C:\Users\j111718\AppData\Local\Programs\Python\workspace\homePC_code\input\boot_bat"
     inputFile = fr"{inputFolder}\master_boot.bat"
-    outputFolder =  r"C:\Users\j111718\AppData\Local\Programs\Python\workspace\homePC_code\output\boot_bat"
+    outputFolder =  fr"C:\Users\j111718\AppData\Local\Programs\Python\workspace\homePC_code\output\boot_bat"
     webTitle = ":rocket: Delayed app launch batch creation -Local"
     webTab = "Create batch file"
 
@@ -50,7 +50,7 @@ else:
 # ---------------------------------------------------------------------------------------
 
 
-# 文字列定義
+# character string definition
 dataDict = {
     "creating": [False, False, False,  False, False, False, False, False, False, False, False, False, False, False, False, False],
     "Device (not editable)": ["Database device", "Calculating device1", "Calculating device2",  "External communicating device",  "Display device1", "Display device2", "Training devices",   "Other device", "Other device", "Other device" , "Remote calculating device1", "Remote display device1", "Remote display device2",  "Remote other device", "Remote other device" , "Remote other device" ], 
@@ -152,7 +152,6 @@ def web_Home(webTitle, webTab):
     st.write(f':large_blue_diamond:**:blue[2. Next, check the target device.]**  (Others are changed as needed)')
 
 
-    # max_len = max([len(v) for v in dataDict.values()])
 
     # Put e front of the line. the office at the front of the line.
     for i, str in enumerate(dataDict['file-name']):
@@ -181,8 +180,8 @@ def web_Home(webTitle, webTab):
     updated_data = {
         'creating':[],
         'Device (not editable)': [],
-       'file-name': [],
-       'Node No.': [],
+        'file-name': [],
+        'Node No.': [],
         'Launch delay (sec)': []
     }
 
@@ -227,7 +226,7 @@ def web_Home(webTitle, webTab):
             for i, value in enumerate(updated_data['creating']):
                 if value : 
 
-                    # ファイル保存
+                    # file saving
                     outputDamFile = fr"{outputOfficeFolder}\app_start_{updated_data['file-name'][i]}.bat"
                     shutil.copy2(inputFile, outputDamFile)
 
@@ -245,13 +244,11 @@ def web_Home(webTitle, webTab):
 
             st.code(outputOfficeFolder, language="html")
             st.success(compMsg)
-            # st.error(f"作り直したい場合は、**『起動バッチ_{office}』** フォルダを一度削除してください。")
+    
             st.error(f"If you wish to recreate it, delete the **(boot_bat_{office})**  folder.")
 
 
 
-
- 
 
 
         pass
@@ -269,7 +266,7 @@ def web_Home(webTitle, webTab):
 # ---------------------------------------------------------------------------------------
 
 
-# メインプログラム
+# main program
 if __name__ == "__main__":
     web_Home(webTitle, webTab)
 

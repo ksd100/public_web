@@ -137,6 +137,7 @@ pathspec==0.11.1
 pathy==0.10.1
 pickleshare==0.7.5
 Pillow==9.3.0
+pip==23.2.1
 pinecone-client==2.2.1
 platformdirs==3.5.0
 playsound==1.2.2
@@ -185,7 +186,6 @@ python-json-logger==2.0.7
 pytweening==1.0.4
 pytz==2022.7
 pytz-deprecation-shim==0.1.0.post0
-pywin32==305
 pywinpty==2.0.10
 PyYAML==6.0
 pyyaml_env_tag==0.1
