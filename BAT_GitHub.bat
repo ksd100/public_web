@@ -9,4 +9,4 @@ rem Enter your commit message
 set /p commit_msg=Enter commit message: 
 git commit -m "%commit_msg%"
 
-git push origin main
+git push -u origin main
