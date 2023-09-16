@@ -35,7 +35,7 @@ def web_Home():
     st.title(webTitle)
     st.write('')
     st.write('')
-    st.write('**:blue[You do not have to enter the same information over and over again.]**')
+    st.write('**:blue[Eliminates the need to enter the same information over and over again.]**')
 
 
     # st.write('')

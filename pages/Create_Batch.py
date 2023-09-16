@@ -122,7 +122,7 @@ def web_Home(webTitle, webTab):
     st.title(webTitle)
     st.write("")
 
-    st.write("**Set according to your system.**")
+    st.write("**For multiple computers in the system, start the applications on those computers at different times.**")
     st.write(":red[It does not work on streamlit cloud because it is not possible to generate folders. Please use it after dropping it locally.]")
     st.write("")
 
