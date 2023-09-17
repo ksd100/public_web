@@ -48,11 +48,11 @@ else:
 
 # character string definition
 dataDict = {
-    "creating": [False, False, False,  False, False, False, False, False, False, False, False, False, False, False, False, False],
-    "Device (not editable)": ["Database device", "Calculating device1", "Calculating device2",  "External communicating device",  "Display device1", "Display device2", "Training devices",   "Other device", "Other device", "Other device" , "Remote calculating device1", "Remote display device1", "Remote display device2",  "Remote other device", "Remote other device" , "Remote other device" ], 
-    "file-name": ["db-pc", "calc-pc1", "calc-pc2", "comm-pc", "disp-pc1", "disp-pc2", "train-pc",  "aXXX-pc", "bXXX-pc", "cXXX-pc", "R-calc-pc", "R-disp-pc1", "R-disp-pc2",  "R-dXXX-pc", "R-eXXX-pc", "R-fXXX-pc"], 
-    "Node No.": ["130", "100", "101",  "170", "150", "151", "190",  "X", "X", "X", "130", "150", "151",  "X", "X", "X"], 
-    "Launch delay (sec)": ["30", "90", "120", "150", "180", "190", "200",  "X", "X", "X", "30", "90", "120",  "X", "X", "X"]
+    "creating": [False, False, False,  False, False, False, False, False, False, False, False, False, False, False, False],
+    "Device (not editable)": ["Database device", "Calculating device",  "External communicating device",  "Display device1", "Display device2", "Training devices",   "Other device", "Other device", "Other device" , "Remote calculating device", "Remote display device1", "Remote display device2",  "Remote other device", "Remote other device" , "Remote other device" ], 
+    "file-name": ["db-pc", "calc-pc", "comm-pc", "disp-pc1", "disp-pc2", "train-pc",  "aXXX-pc", "bXXX-pc", "cXXX-pc", "R-calc-pc", "R-disp-pc1", "R-disp-pc2",  "R-dXXX-pc", "R-eXXX-pc", "R-fXXX-pc"], 
+    "Node No.": ["900", "100",  "120", "150", "151", "190",  "X", "X", "X", "100", "150", "151",  "X", "X", "X"], 
+    "Launch delay (sec)": ["30", "90", "120", "150", "180", "210",  "X", "X", "X", "30", "90", "120",  "X", "X", "X"]
     }
 
 machineList = dataDict['Device (not editable)']
@@ -132,7 +132,7 @@ def web_Home(webTitle, webTab):
     st.write(':large_blue_diamond:**:blue[1. first, set the following]**')
  
     folderPath = st.text_input(fr"Folder with Exe (e.g. C:\Users\2023-02-02-XXXX\Develop\Exe)")
-    exeName = st.text_input(fr"Name of the exe", placeholder="exe filename (excluding file extensions)")
+    exeName = st.text_input(fr"Name of the exe", placeholder="exe filename (excluding extensions)")
 
     col11, col12 = st.columns(2)
     office = col11.text_input(fr'Abbreviation for  Office',  placeholder=fr"slc, etc. (for Salt Lake City)")
